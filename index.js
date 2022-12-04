@@ -20,15 +20,6 @@
 
 console.clear();
 
-function getRandomColor() {
-  const letters = "0123456789ABCDEF";
-  const color = "#";
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
-
 const div = document.querySelector('[data-js="div"]');
 const score = document.querySelector('[data-js="p"]');
 let divEscaped = 0;
@@ -44,7 +35,7 @@ div.addEventListener("mouseover", () => {
   div.style.left = getRandomNumber(0, 100) + `%`;
 
   divEscaped++;
-  getRandomColor;
+
   score.textContent = `div escaped: ${divEscaped}`;
 });
 
